@@ -10,7 +10,6 @@ public class CompletedQuizDto {
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Long id;
 
-    @JsonProperty("id")
     private Long quizId;
 
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)

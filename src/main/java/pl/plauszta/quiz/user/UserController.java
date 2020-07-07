@@ -1,5 +1,6 @@
 package pl.plauszta.quiz.user;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirements;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -23,6 +24,7 @@ public class UserController {
         this.userService = userService;
     }
 
+    @SecurityRequirements({})
     @PostMapping(path = "/register")
     public void register(@RequestBody @Valid UserDto user) {
         log.info("/api/register Registering: {}", user.getEmail());
